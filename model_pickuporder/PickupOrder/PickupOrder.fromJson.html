@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the PickupOrder.fromJson constructor from Class PickupOrder from the pickuporder library, for the Dart programming language.">
+  <title>PickupOrder.fromJson constructor - PickupOrder - pickuporder library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">my_pcp</a></li>
+    <li><a href="../../model_pickuporder/model_pickuporder-library.html">model\pickuporder.dart</a></li>
+    <li><a href="../../model_pickuporder/PickupOrder-class.html">PickupOrder</a></li>
+    <li class="self-crumb">PickupOrder.fromJson factory constructor</li>
+  </ol>
+  <div class="self-name">PickupOrder.fromJson</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="model_pickuporder&#47;PickupOrder-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">PickupOrder.fromJson</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">PickupOrder.fromJson</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="fromJson-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">json</span></span></li>
+</ol>)
+    </section>
+
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">factory PickupOrder.fromJson(Map&lt;String, dynamic&gt; json) {
+  return PickupOrder(
+    poId: json[&#39;PO_Id&#39;].toString(),
+    seqNum: json[&#39;Seq_Num&#39;].toString(),
+    branchId: json[&#39;Branch_Id&#39;].toString(),
+    branchName: json[&#39;Branch_Name&#39;].toString(),
+    officeSiteId: json[&#39;Office_Site_Id&#39;].toString(),
+    officeName: json[&#39;Office_Name&#39;].toString(),
+    accountId: json[&#39;Account_Id&#39;].toString(),
+    accountIdOld: json[&#39;Account_Id_Old&#39;].toString(),
+    accountName: json[&#39;AccountName&#39;].toString(),
+    accountAddress: json[&#39;Account_Address&#39;].toString(),
+    serviceId: json[&#39;Service_Id&#39;].toString(),
+    serviceCode: json[&#39;Service_Code&#39;].toString(),
+    serviceAlias: json[&#39;Service_Alias&#39;].toString(),
+    serviceName: json[&#39;Service_Name&#39;].toString(),
+    payTypeId: json[&#39;Pay_Type_Id&#39;].toString(),
+    shipTypeId: json[&#39;Ship_Type_Id&#39;].toString(),
+    shipmentName: json[&#39;Shipment_Name&#39;].toString(),
+    transportId: json[&#39;Transport_Id&#39;].toString(),
+    vehicleName: json[&#39;Vehicle_Name&#39;].toString(),
+    pickupDate: json[&#39;Pickup_Date&#39;].toString(),
+    assignDate: json[&#39;Assign_Date&#39;].toString(),
+    courierId: json[&#39;Courier_Id&#39;].toString(),
+    courierName: json[&#39;Courier_Name&#39;].toString(),
+    helperId: json[&#39;Helper_Id&#39;].toString(),
+    helperName: json[&#39;Helper_Name&#39;].toString(),
+    fleetId: json[&#39;Fleet_Id&#39;].toString(),
+    merk: json[&#39;Merk&#39;].toString(),
+    model: json[&#39;Model&#39;].toString(),
+    fleetType: json[&#39;Fleet_Type&#39;].toString(),
+    typeCode: json[&#39;Type_Code&#39;].toString(),
+    addressPickup: json[&#39;Address_Pickup&#39;].toString(),
+    contactName: json[&#39;Contact_Name&#39;].toString(),
+    telphoneNo: json[&#39;Telphone_No&#39;].toString(),
+    totalKoli: json[&#39;Total_Koli&#39;].toString(),
+    totalWeight: json[&#39;Total_Weight&#39;].toString(),
+    remark: json[&#39;Remark&#39;].toString(),
+    reasonId: json[&#39;Reason_Id&#39;].toString(),
+    reasonName: json[&#39;Reason_Name&#39;].toString(),
+    statusId: json[&#39;Status_Id&#39;].toString(),
+    statusName: json[&#39;Status_Name&#39;].toString(),
+    pById: json[&#39;PBy_Id&#39;].toString(),
+    descriptionProcessedBy: json[&#39;Description_Processed_By&#39;].toString(),
+    createdDate: json[&#39;Created_Date&#39;].toString(),
+    modifiedDate: json[&#39;Modified_Date&#39;].toString(),
+    activeId: json[&#39;Active_Id&#39;].toString(),
+    activeName: json[&#39;Active_Name&#39;].toString(),
+    userId: json[&#39;User_Id&#39;].toString(),
+    displayName: json[&#39;Display_Name&#39;].toString(),
+    pocId: json[&#39;POC_Id&#39;].toString(),
+    statusIdPOC: json[&#39;Status_Id_POC&#39;].toString(),
+    statusNamePOC: json[&#39;Status_Name_POC&#39;].toString(),
+    confirmDate: json[&#39;Confirm_Date&#39;].toString(),
+    pByIdPOC: json[&#39;PBy_Id_POC&#39;].toString(),
+    pByNamePOC: json[&#39;Pby_Name_POC&#39;].toString(),
+    pickupHours: json[&#39;Pickup_Hours&#39;].toString(),
+    pickupColor: json[&#39;Pickup_Color&#39;].toString(),
+    pickupTime: json[&#39;Pickup_Time&#39;].toString(),
+    pickupImage: json[&#39;Pickup_Image&#39;].toString(),
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">my_pcp</a></li>
+    <li><a href="../../model_pickuporder/model_pickuporder-library.html">pickuporder</a></li>
+    <li><a href="../../model_pickuporder/PickupOrder-class.html">PickupOrder</a></li>
+    <li class="self-crumb">PickupOrder.fromJson factory constructor</li>
+</ol>
+
+
+    <h5>PickupOrder class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    my_pcp
+      1.0.0+12
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
