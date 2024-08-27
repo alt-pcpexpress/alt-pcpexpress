@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="scribbler-global.css">
     <link rel="stylesheet" href="scribbler-landing.css">
     <link rel="icon" href="icon.png">
@@ -154,35 +155,43 @@
             </div> -->
             </div>
         </div>
+
+        <footer class="footer">Made with &#9829; by Abdul Latif<br> Inspired by<a href="https://tympanus.net/codrops/"
+                target="_blank" class="link link--light"> Codrops</a>.</footer>
     </div>
 
-    <div id="password-prompt">
-        <h2>Password Required</h2>
-        <input type="password" id="password-input" placeholder="Enter password" />
-        <button onclick="checkPassword()">Submit</button>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login Required</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="passwordForm">
+                        <div class="form-group">
+                            <label for="password-input">Enter Password:</label>
+                            <input type="password" id="password-input" name="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Include Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <footer class="footer">Made with &#9829; by Abdul Latif<br> Inspired by<a href="https://tympanus.net/codrops/"
-            target="_blank" class="link link--light"> Codrops</a>.</footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="scribbler.js"></script>
     <script>
         // Replace 'your-hashed-password' with the SHA-256 hash of your password
         const hashedPassword = '543DB9F55AA1D76F75BD8DFCBA66895E86518F8524AA4AEE2111B40F24A058DE';
-
-        async function checkPassword() {
-            const password = document.getElementById('password-input').value;
-            const hashedInput = await hashPassword(password);
-
-            if (hashedInput === hashedPassword) {
-                document.getElementById('password-prompt').style.display = 'none';
-                document.getElementById('protected-content').style.display = 'block';
-            } else {
-                alert('Incorrect password!');
-            }
-        }
-
         async function hashPassword(password) {
             const encoder = new TextEncoder();
             const data = encoder.encode(password);
@@ -191,6 +200,28 @@
             const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
             return hashHex.toUpperCase();
         }
+
+        async function checkPassword(password) {
+            const hashedInput = await hashPassword(password);
+            if (hashedInput === hashedPassword) {
+                //document.getElementById('password-prompt').style.display = 'none';
+                document.getElementById('protected-content').style.display = 'block';
+                $('#loginModal').modal('hide');
+            } else {
+                alert('Incorrect password!');
+            }
+        }
+
+        document.getElementById('passwordForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const password = document.getElementById('password-input').value;
+            checkPassword(password);
+        });
+
+        // Show the login modal on page load
+        $(document).ready(function () {
+            $('#loginModal').modal('show');
+        });
     </script>
 </body>
 
