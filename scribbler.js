@@ -132,20 +132,6 @@ window.addEventListener('load', function () {
   icon.addEventListener('click', showNav);
 });
 //latif here
-//add pass check
-function checkPassword() {
-  const enteredPassword = document.getElementById('password-input').value;
-  const secretPass = '543DB9F55AA1D76F75BD8DFCBA66895E86518F8524AA4AEE2111B40F24A058DE'; // Replace with the hashed password
-
-  // Here, you should hash the entered password and compare it to the hashed version.
-  // For simplicity, we'll use a plain comparison for now.
-  if (enteredPassword === atob(secretPass)) { // Using Base64 decoding for demo purposes
-    document.getElementById('password-prompt').style.display = 'none';
-    document.getElementById('protected-content').style.display = 'block';
-  } else {
-    alert('Incorrect password!');
-  }
-}
 //add smoth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
