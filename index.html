@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    <div id="protected-content" style="display:none;">
+    <div id="protected-content" style="display:block;">
+        <!-- <div id="protected-content" style="display:none;"> -->
         <nav>
             <div class="logo"></div>
             <ul class="menu">
@@ -27,7 +28,7 @@
             </ul>
         </nav>
         <div class="hero">
-            <h1 class="hero__title"><img src="myPCP.png" height="50px"></h1>
+            <h1 class="hero__title"><img src="myPCP.png" height="50px"></h1><br>
             <p class="hero__description">myPCP Express kini hadir dengan beragam fitur</p>
         </div>
         <div class="hero__terminal">
@@ -187,6 +188,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="scribbler.js"></script>
     <script>
@@ -219,9 +221,10 @@
         });
 
         // Show the login modal on page load
-        $(document).ready(function () {
-            $('#loginModal').modal('show');
-        });
+        // $(document).ready(function () {
+
+        // $('#loginModal').modal('show');
+        //});
     </script>
 </body>
 
