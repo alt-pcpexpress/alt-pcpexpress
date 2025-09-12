@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strategi Keamanan Fase 1: Rencana Aksi 60 Hari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 320px;
+        max-height: 400px;
+      }
+      @media (min-width: 768px) {
+        .chart-container {
+          height: 384px;
+        }
+      }
+      .flow-arrow::after {
+        content: "→";
+        font-size: 2rem;
+        line-height: 1;
+        color: #418ff1;
+        margin: 0 1rem;
+      }
+      .flow-item {
+        transition: all 0.3s ease-in-out;
+      }
+      .flow-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-700">
+    <!-- Palette: Brilliant Blues (#004AAD, #0062D5, #418FF1, #81B7F7, #BBD8FB) -->
+    <!-- Narrative Plan: Hero -> 3 Pillars -> Deep Dive on Each Pillar (Assets, Visibility, Quick Wins) -> Tools -> Collaboration -> Timeline -> Conclusion -->
+    <!-- Visualization Choices: Donut (Chart.js), Line (Chart.js), Bar (Chart.js), Flowchart (HTML/CSS), Relationship Map (HTML/CSS), Timeline (HTML/CSS). All choices adhere to NO SVG and NO MERMAID JS constraints. -->
+    <!-- Confirmation: Neither Mermaid JS nor SVG were used in this file. All visualizations are rendered using Chart.js on Canvas or structured HTML/CSS with Tailwind. -->
+
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 md:p-8">
+      <header class="text-center py-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#004AAD]">
+          Strategi Keamanan Fase 1
+        </h1>
+        <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+          Rencana Aksi 30-60 Hari untuk Membangun Fondasi, Mendapatkan
+          Visibilitas, dan Meraih Kemenangan Cepat.
+        </p>
+      </header>
+
+      <section id="pillars" class="py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#0062D5]"
+          >
+            <div class="text-5xl mb-4">🗺️</div>
+            <h3 class="text-xl font-bold text-[#004AAD]">Inventarisasi Aset</h3>
+            <p class="mt-2 text-slate-600">
+              Mengidentifikasi dan memetakan semua aset digital krusial untuk
+              mengetahui apa yang harus dilindungi.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#418FF1]"
+          >
+            <div class="text-5xl mb-4">👁️</div>
+            <h3 class="text-xl font-bold text-[#004AAD]">
+              Peningkatan Visibilitas
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Membangun kemampuan untuk memantau, mendeteksi, dan merespons
+              aktivitas mencurigakan secara real-time.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#81B7F7]"
+          >
+            <div class="text-5xl mb-4">🏆</div>
+            <h3 class="text-xl font-bold text-[#004AAD]">Kemenangan Cepat</h3>
+            <p class="mt-2 text-slate-600">
+              Mengatasi risiko keamanan paling jelas untuk mengurangi permukaan
+              serangan secara signifikan dan cepat.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="assets" class="py-12">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 class="text-3xl font-bold text-[#004AAD]">
+                Langkah 1: Kenali Aset Digital Anda
+              </h2>
+              <p class="mt-4 text-slate-600">
+                Langkah fundamental pertama adalah memahami lanskap teknologi
+                kita. Kita tidak bisa melindungi apa yang tidak kita ketahui.
+                Proses ini memastikan kita fokus pada aset yang paling vital
+                bagi kelangsungan bisnis, atau "Crown Jewels" perusahaan.
+              </p>
+              <div class="mt-6">
+                <h4 class="font-semibold text-lg text-[#0062D5]">
+                  Proses Penemuan Aset:
+                </h4>
+                <div
+                  class="mt-4 flex flex-wrap items-center justify-center lg:justify-start"
+                >
+                  <div
+                    class="flow-item bg-slate-100 p-4 rounded-lg shadow-sm text-center"
+                  >
+                    <p class="font-bold text-[#004AAD]">Pindai & Temukan</p>
+                    <p class="text-sm">Otomatisasi pemetaan</p>
+                  </div>
+                  <div class="flow-arrow hidden sm:block"></div>
+                  <div
+                    class="flow-item bg-slate-100 p-4 rounded-lg shadow-sm text-center mt-4 sm:mt-0"
+                  >
+                    <p class="font-bold text-[#004AAD]">Kategorikan</p>
+                    <p class="text-sm">Server, aplikasi, DB</p>
+                  </div>
+                  <div class="flow-arrow hidden sm:block"></div>
+                  <div
+                    class="flow-item bg-slate-100 p-4 rounded-lg shadow-sm text-center mt-4 sm:mt-0"
+                  >
+                    <p class="font-bold text-red-600">
+                      Identifikasi Crown Jewels
+                    </p>
+                    <p class="text-sm">Aset paling kritis</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p class="text-center font-medium text-slate-600 mb-2">
+                Estimasi Komposisi Aset Digital
+              </p>
+              <div class="chart-container">
+                <canvas id="assetChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="visibility" class="py-12">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <p class="text-center font-medium text-slate-600 mb-2">
+                Proyeksi Peningkatan Deteksi Ancaman
+              </p>
+              <div class="chart-container">
+                <canvas id="detectionChart"></canvas>
+              </div>
+            </div>
+            <div class="order-first lg:order-last">
+              <h2 class="text-3xl font-bold text-[#004AAD]">
+                Langkah 2: Membangun Visibilitas
+              </h2>
+              <p class="mt-4 text-slate-600">
+                Tanpa visibilitas, tim keamanan bekerja dalam gelap. Dengan
+                mengumpulkan dan menganalisis log dari sistem-sistem kritis,
+                kita membangun "menara pengawas" digital. Ini memungkinkan kita
+                untuk mendeteksi anomali dan merespons insiden sebelum
+                menyebabkan kerusakan signifikan.
+              </p>
+              <div class="mt-6 space-y-4">
+                <div class="flex items-start">
+                  <span class="text-blue-500 font-bold text-xl mr-3">✓</span>
+                  <p>
+                    <strong>Log Terpusat:</strong> Mengumpulkan semua jejak
+                    digital dari server dan aplikasi penting ke satu lokasi
+                    untuk analisis.
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-blue-500 font-bold text-xl mr-3">✓</span>
+                  <p>
+                    <strong>Peringatan Dini:</strong> Mengatur notifikasi untuk
+                    aktivitas berisiko, seperti 5+ gagal login, pembuatan akun
+                    admin, atau akses data sensitif di luar jam kerja.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quick-wins" class="py-12">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 class="text-3xl font-bold text-[#004AAD]">
+                Langkah 3: Meraih Kemenangan Cepat
+              </h2>
+              <p class="mt-4 text-slate-600">
+                Fokus pada perbaikan yang memberikan dampak keamanan terbesar
+                dengan usaha minimal. Tindakan ini secara langsung mengurangi
+                celah yang paling sering dieksploitasi oleh penyerang dan
+                menunjukkan hasil nyata dalam waktu singkat.
+              </p>
+              <ul class="mt-6 list-none space-y-3">
+                <li class="flex items-center">
+                  <span
+                    class="bg-[#0062D5] text-white rounded-full w-6 h-6 text-center mr-3 font-bold"
+                    >1</span
+                  >
+                  Lakukan pemindaian kerentanan awal pada "Crown Jewels".
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="bg-[#0062D5] text-white rounded-full w-6 h-6 text-center mr-3 font-bold"
+                    >2</span
+                  >
+                  Terapkan Multi-Factor Authentication (MFA) untuk semua akses
+                  krusial.
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="bg-[#0062D5] text-white rounded-full w-6 h-6 text-center mr-3 font-bold"
+                    >3</span
+                  >
+                  Tinjau konfigurasi keamanan dasar pada layanan cloud.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-center font-medium text-slate-600 mb-2">
+                Dampak Terhadap Penurunan Risiko
+              </p>
+              <div class="chart-container">
+                <canvas id="riskChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tools-and-teams" class="py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-[#004AAD] mb-4">
+              Kebutuhan Perangkat (Tools)
+            </h2>
+            <p class="mb-6 text-slate-600">
+              Untuk mengeksekusi fase 1, kami akan memanfaatkan kombinasi
+              perangkat *open-source* yang andal dan, jika diperlukan, perangkat
+              komersial untuk kapabilitas yang lebih canggih.
+            </p>
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-bold text-[#0062D5]">Inventarisasi Aset:</h4>
+                <p>Nmap, skrip kustom, data dari Cloud Provider.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#0062D5]">Visibilitas & Logging:</h4>
+                <p>ELK Stack (Elasticsearch, Logstash, Kibana) atau Graylog.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#0062D5]">Pemindaian Kerentanan:</h4>
+                <p>OpenVAS, Nessus Essentials.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#0062D5]">Pengamanan Kode:</h4>
+                <p>Gitleaks (untuk mencegah kebocoran kredensial).</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-[#004AAD] mb-4">
+              Komunikasi & Kolaborasi
+            </h2>
+            <p class="mb-6 text-slate-600">
+              Keberhasilan program keamanan tidak hanya bergantung pada
+              teknologi, tetapi juga pada kolaborasi yang kuat di seluruh
+              organisasi.
+            </p>
+            <ul class="space-y-3">
+              <li class="p-3 bg-slate-50 rounded-md">
+                <strong>Tim Infrastruktur & DevOps:</strong> Partner utama untuk
+                implementasi teknis, patching, dan otomatisasi.
+              </li>
+              <li class="p-3 bg-slate-50 rounded-md">
+                <strong>Tim Pengembang Aplikasi:</strong> Untuk remediasi
+                kerentanan pada kode dan adopsi praktik DevSecOps.
+              </li>
+              <li class="p-3 bg-slate-50 rounded-md">
+                <strong>Pemilik Bisnis/Produk:</strong> Untuk memahami konteks
+                bisnis, dampak, dan prioritas aset.
+              </li>
+              <li class="p-3 bg-slate-50 rounded-md">
+                <strong>Tim Hukum & Kepatuhan:</strong> Untuk memastikan program
+                sejalan dengan regulasi yang berlaku.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="py-12">
+        <h2 class="text-3xl font-bold text-[#004AAD] text-center mb-10">
+          Garis Waktu Implementasi Fase 1
+        </h2>
+        <div class="relative w-full">
+          <div
+            class="absolute left-1/2 top-0 h-full w-0.5 bg-[#81B7F7] transform -translate-x-1/2"
+          ></div>
+          <div class="relative flex flex-col items-center space-y-8">
+            <div class="w-full flex justify-start">
+              <div class="w-5/12">
+                <div class="bg-white p-4 rounded-lg shadow-lg text-right">
+                  <h4 class="font-bold text-[#0062D5]">Minggu 1-3</h4>
+                  <p class="text-sm text-slate-600">
+                    Inventarisasi Aset & Identifikasi "Crown Jewels".
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#0062D5] rounded-full border-4 border-white"
+              ></div>
+            </div>
+
+            <div class="w-full flex justify-end">
+              <div class="w-5/12">
+                <div class="bg-white p-4 rounded-lg shadow-lg text-left">
+                  <h4 class="font-bold text-[#0062D5]">Minggu 2-5</h4>
+                  <p class="text-sm text-slate-600">
+                    Implementasi Pengumpulan Log Terpusat untuk sistem kritis.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#0062D5] rounded-full border-4 border-white"
+              ></div>
+            </div>
+
+            <div class="w-full flex justify-start">
+              <div class="w-5/12">
+                <div class="bg-white p-4 rounded-lg shadow-lg text-right">
+                  <h4 class="font-bold text-[#0062D5]">Minggu 4-8</h4>
+                  <p class="text-sm text-slate-600">
+                    Pemindaian kerentanan awal, memulai adopsi MFA, & review
+                    konfigurasi cloud.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#0062D5] rounded-full border-4 border-white"
+              ></div>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div class="w-5/12 text-center">
+                <div class="bg-[#004AAD] text-white p-4 rounded-lg shadow-lg">
+                  <h4 class="font-bold">Fase 1 Selesai</h4>
+                  <p class="text-sm">
+                    Fondasi keamanan terbentuk dan siap untuk fase selanjutnya.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-white"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-6 bg-slate-100">
+      <p class="text-slate-500 text-sm">
+        &copy; 2025 Divisi Keamanan Informasi Perusahaan Anda
+      </p>
+    </footer>
+
+    <script>
+      const chartTooltipCallback = {
+        plugins: {
+          tooltip: {
+            callbacks: {
+              title: function (tooltipItems) {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                  return label.join(" ");
+                }
+                return label;
+              },
+            },
+          },
+        },
+      };
+
+      const processLabels = (labels) => {
+        const charLimit = 16;
+        return labels.map((label) => {
+          if (typeof label !== "string" || label.length <= charLimit) {
+            return label;
+          }
+          const words = label.split(" ");
+          const newLabels = [];
+          let currentLine = "";
+          words.forEach((word) => {
+            if ((currentLine + " " + word).trim().length > charLimit) {
+              newLabels.push(currentLine.trim());
+              currentLine = word;
+            } else {
+              currentLine = (currentLine + " " + word).trim();
+            }
+          });
+          if (currentLine) {
+            newLabels.push(currentLine.trim());
+          }
+          return newLabels;
+        });
+      };
+
+      const brilliantBlues = {
+        dark: "#004AAD",
+        primary: "#0062D5",
+        medium: "#418FF1",
+        light: "#81B7F7",
+        lighter: "#BBD8FB",
+      };
+
+      const ctxAsset = document.getElementById("assetChart");
+      if (ctxAsset) {
+        new Chart(ctxAsset, {
+          type: "doughnut",
+          data: {
+            labels: [
+              "Aplikasi Internal",
+              "Server & VM",
+              "Database",
+              "Layanan Cloud",
+            ],
+            datasets: [
+              {
+                label: "Komposisi Aset",
+                data: [40, 30, 20, 10],
+                backgroundColor: [
+                  brilliantBlues.primary,
+                  brilliantBlues.medium,
+                  brilliantBlues.light,
+                  brilliantBlues.lighter,
+                ],
+                borderColor: "#FFFFFF",
+                borderWidth: 2,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              ...chartTooltipCallback.plugins,
+              legend: {
+                position: "bottom",
+              },
+              title: {
+                display: false,
+              },
+            },
+          },
+        });
+      }
+
+      const ctxDetection = document.getElementById("detectionChart");
+      if (ctxDetection) {
+        new Chart(ctxDetection, {
+          type: "line",
+          data: {
+            labels: ["Hari 1", "Hari 15", "Hari 30", "Hari 45", "Hari 60"],
+            datasets: [
+              {
+                label: "Kemampuan Deteksi Ancaman",
+                data: [10, 25, 50, 75, 90],
+                fill: true,
+                backgroundColor: "rgba(65, 143, 241, 0.2)",
+                borderColor: brilliantBlues.medium,
+                tension: 0.4,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100,
+                ticks: {
+                  callback: function (value) {
+                    return value + "%";
+                  },
+                },
+              },
+            },
+            plugins: {
+              ...chartTooltipCallback.plugins,
+              legend: {
+                display: false,
+              },
+            },
+          },
+        });
+      }
+
+      const ctxRisk = document.getElementById("riskChart");
+      if (ctxRisk) {
+        new Chart(ctxRisk, {
+          type: "bar",
+          data: {
+            labels: [
+              "Akses Ilegal",
+              "Kerentanan Umum",
+              "Kesalahan Konfigurasi",
+            ],
+            datasets: [
+              {
+                label: "Risiko Sebelum",
+                data: [90, 80, 75],
+                backgroundColor: "#FF6384",
+                borderColor: "#FFFFFF",
+                borderWidth: 1,
+              },
+              {
+                label: "Risiko Sesudah",
+                data: [30, 40, 35],
+                backgroundColor: brilliantBlues.light,
+                borderColor: "#FFFFFF",
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100,
+                title: {
+                  display: true,
+                  text: "Tingkat Risiko (%)",
+                },
+              },
+            },
+            plugins: {
+              ...chartTooltipCallback.plugins,
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

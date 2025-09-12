@@ -1,79 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PCP Express Documentation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scribbler-global.css" />
+    <link rel="stylesheet" href="scribbler-landing.css" />
+    <link rel="icon" href="icon.png" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>myPCP Express Documentation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="scribbler-global.css">
-    <link rel="stylesheet" href="scribbler-landing.css">
-    <link rel="icon" href="icon.png">
-</head>
-
-<body>
-    <div id="protected-content" style="display:block;">
-        <!-- <div id="protected-content" style="display:none;"> -->
-        <nav>
-            <div class="logo"></div>
-            <ul class="menu">
-                <div class="menu__item toggle"><span></span></div>
-                <li class="menu__item"><a href="#callout" class="link link--dark"><i class="fa fa-book"></i>
-                        Documentation</a></li>
-                <li class="menu__item"><a href="https://github.com/latiefdole" class="link link--dark"><i
-                            class="fa fa-github"></i> Github</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1 class="hero__title"><img src="myPCP.png" height="50px"></h1><br>
-            <p class="hero__description">myPCP Express kini hadir dengan beragam fitur</p>
-        </div>
-        <div class="hero__terminal">
-            <pre>
+  <body>
+    <div id="protected-content" style="display: block">
+      <!-- <div id="protected-content" style="display:none;"> -->
+      <nav>
+        <div class="logo"></div>
+        <ul class="menu">
+          <div class="menu__item toggle"><span></span></div>
+          <li class="menu__item">
+            <a href="security-engineer.html" class="link link--dark"
+              ><i class="fa fa-book"></i> Security Engineer Preparation</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="#callout" class="link link--dark"
+              ><i class="fa fa-book"></i> Documentation</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="https://github.com/latiefdole" class="link link--dark"
+              ><i class="fa fa-github"></i> Github</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <h1 class="hero__title"><img src="myPCP.png" height="50px" /></h1>
+        <br />
+        <p class="hero__description">
+          myPCP Express kini hadir dengan beragam fitur
+        </p>
+      </div>
+      <div class="hero__terminal">
+        <pre>
         <!-- Place your demo code here -->
         <code class="shell-session demo">pcpexpress: ~ $ </code>
       </pre>
-        </div>
-        <div class="wrapper">
-            <div class="installation">
-                <h3 class="section__title">Installation</h3>
-                <div class="tab__container">
-                    <ul class="tab__menu">
-                        <li class="tab active" data-tab="android">Android</li>
-                        <li class="tab" data-tab="ios">iOS</li>
-                    </ul>
-                    <pre class="nohighlight code">
+      </div>
+      <div class="wrapper">
+        <div class="installation">
+          <h3 class="section__title">Installation</h3>
+          <div class="tab__container">
+            <ul class="tab__menu">
+              <li class="tab active" data-tab="android">Android</li>
+              <li class="tab" data-tab="ios">iOS</li>
+            </ul>
+            <pre class="nohighlight code">
             <code class="tab__pane active android"><a href="https://play.google.com/store/apps/details?id=id.smn.sapa.ver3.pcpexpress" style="color: blue;"><img src="logo-ps.svg" alt="Logo PlayStore" height="12px"> Google Play Store</a></code>
             <code class="tab__pane ios"><a href="https://apps.apple.com/app/mypcp-express/id6599313727" style="color: blue;"><img src="logo-as.svg" alt="Logo Appstore" height="12px"> App Store</a></code>
           </pre>
-                </div>
-            </div>
-            <div class="feature">
-                <div class="feature__item">
-                    <h3 class="section__title">Tampilan Baru:</h3>
-                    <p>Desain antarmuka pengguna yang diperbarui dengan tampilan yang lebih modern dan ramah pengguna.
-                    </p>
-                </div>
-                <div class="feature__item">
-                    <h3 class="section__title">Peningkatan Kinerja:</h3>
-                    <p>Pengoptimalan aplikasi untuk meningkatkan kecepatan dan responsivitas.</p>
-                </div>
-                <div class="feature__item">
-                    <h3 class="section__title">Fitur COD (Bayar di Tempat):</h3>
-                    <p>Pengguna kini dapat memilih opsi bayar di tempat saat melakukan pemesanan, memberikan
-                        fleksibilitas
-                        tambahan dalam metode pembayaran.</p>
-                </div>
-                <div class="feature__item">
-                    <h3 class="section__title">Perbaikan Bug:</h3>
-                    <p>Beberapa bug minor dari versi sebelumnya telah diperbaiki untuk meningkatkan stabilitas aplikasi.
-                    </p>
-                </div>
-                <!-- <div class="feature__item">
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature__item">
+            <h3 class="section__title">Tampilan Baru:</h3>
+            <p>
+              Desain antarmuka pengguna yang diperbarui dengan tampilan yang
+              lebih modern dan ramah pengguna.
+            </p>
+          </div>
+          <div class="feature__item">
+            <h3 class="section__title">Peningkatan Kinerja:</h3>
+            <p>
+              Pengoptimalan aplikasi untuk meningkatkan kecepatan dan
+              responsivitas.
+            </p>
+          </div>
+          <div class="feature__item">
+            <h3 class="section__title">Fitur COD (Bayar di Tempat):</h3>
+            <p>
+              Pengguna kini dapat memilih opsi bayar di tempat saat melakukan
+              pemesanan, memberikan fleksibilitas tambahan dalam metode
+              pembayaran.
+            </p>
+          </div>
+          <div class="feature__item">
+            <h3 class="section__title">Perbaikan Bug:</h3>
+            <p>
+              Beberapa bug minor dari versi sebelumnya telah diperbaiki untuk
+              meningkatkan stabilitas aplikasi.
+            </p>
+          </div>
+          <!-- <div class="feature__item">
                 <h3 class="section__title">Highlightings</h3>
                 <p>For better readability, scribbler has a clean, beautiful color scheme allow you to scan files fast.
                 </p>
@@ -83,8 +117,8 @@
                 <p>You can expect common keybindings for scribbler. Customize <span
                         class="code code--inline">bindings.json</span> for your own liking! </p>
             </div> -->
-            </div>
-            <!-- <div class="keybinding">
+        </div>
+        <!-- <div class="keybinding">
             <ul class="keybinding__detail">
                 <h3 class="keybinding__title">Default Keybindings</h3>
                 <li>Quit without saving <span class="keybinding__label">Ctrl+C</span></li>
@@ -100,34 +134,39 @@
                 <li><span class="keybinding__label">Ctrl+T</span> Insert Table</li>
             </ul>
         </div> -->
-            <div class="callout" id="callout">
-                <br><br><br><br><br><br>
-                <p style="font-size:28px;">Streamlining the process of managing courier packages from creation to
-                    delivery. Access the full
-                    documentation to get started.</p>
-                <a href="Programmer/index.html" class="button--secondary">Programmer Documentation</a>&nbsp;&nbsp;&nbsp;
-                <a href="SystemSupport/doc.html" class="button--primary">System Support Documentation</a>
-                <br><br><br><br><br><br>
-            </div>
+        <div class="callout" id="callout">
+          <br /><br /><br /><br /><br /><br />
+          <p style="font-size: 28px">
+            Streamlining the process of managing courier packages from creation
+            to delivery. Access the full documentation to get started.
+          </p>
+          <a href="Programmer/index.html" class="button--secondary"
+            >Programmer Documentation</a
+          >&nbsp;&nbsp;&nbsp;
+          <a href="SystemSupport/doc.html" class="button--primary"
+            >System Support Documentation</a
+          >
+          <br /><br /><br /><br /><br /><br />
         </div>
-        <div class="changelog">
-            <div class="wrapper">
-                <h3 class="section__title">Changelog</h3>
-                <div class="changelog__item">
-                    <div class="changelog__meta">
-                        <h4 class="changelog__title">v2.0</h4>
-                        <small class="changelog__date">17/08/2024</small>
-                    </div>
-                    <div class="changelog__detail">
-                        <ul>
-                            <li>New UI Design updates</li>
-                            <li>COD (Cash on Delivery) Feature</li>
-                            <li>Optimizations</li>
-                            <li>Bug fixes</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- <div class="changelog__item">
+      </div>
+      <div class="changelog">
+        <div class="wrapper">
+          <h3 class="section__title">Changelog</h3>
+          <div class="changelog__item">
+            <div class="changelog__meta">
+              <h4 class="changelog__title">v2.0</h4>
+              <small class="changelog__date">17/08/2024</small>
+            </div>
+            <div class="changelog__detail">
+              <ul>
+                <li>New UI Design updates</li>
+                <li>COD (Cash on Delivery) Feature</li>
+                <li>Optimizations</li>
+                <li>Bug fixes</li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="changelog__item">
                 <div class="changelog__meta">
                     <h4 class="changelog__title">v0.6</h4>
                     <small class="changelog__date">7/30/2017</small>
@@ -152,37 +191,62 @@
                     </ul>
                 </div>
             </div> -->
-                <!-- <div class="changelog__callout">
+          <!-- <div class="changelog__callout">
                 <a href="#" class="button--secondary">Checkout Full Log</a>
             </div> -->
-            </div>
         </div>
+      </div>
 
-        <footer class="footer">Made with &#9829; by Abdul Latif<br> Inspired by<a href="https://tympanus.net/codrops/"
-                target="_blank" class="link link--light"> Codrops</a>.</footer>
+      <footer class="footer">
+        Made with &#9829; by Abdul Latif<br />
+        Inspired by<a
+          href="https://tympanus.net/codrops/"
+          target="_blank"
+          class="link link--light"
+        >
+          Codrops</a
+        >.
+      </footer>
     </div>
 
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Login Required</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="passwordForm">
-                        <div class="form-group">
-                            <label for="password-input">Enter Password:</label>
-                            <input type="password" id="password-input" name="password" class="form-control" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </form>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login Required</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="passwordForm">
+              <div class="form-group">
+                <label for="password-input">Enter Password:</label>
+                <input
+                  type="password"
+                  id="password-input"
+                  name="password"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Include Bootstrap and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -190,43 +254,49 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
     <script src="scribbler.js"></script>
     <script>
-        // Replace 'your-hashed-password' with the SHA-256 hash of your password
-        const hashedPassword = '543DB9F55AA1D76F75BD8DFCBA66895E86518F8524AA4AEE2111B40F24A058DE';
-        async function hashPassword(password) {
-            const encoder = new TextEncoder();
-            const data = encoder.encode(password);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-            return hashHex.toUpperCase();
-        }
+      // Replace 'your-hashed-password' with the SHA-256 hash of your password
+      const hashedPassword =
+        "543DB9F55AA1D76F75BD8DFCBA66895E86518F8524AA4AEE2111B40F24A058DE";
+      async function hashPassword(password) {
+        const encoder = new TextEncoder();
+        const data = encoder.encode(password);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray
+          .map((b) => b.toString(16).padStart(2, "0"))
+          .join("");
+        return hashHex.toUpperCase();
+      }
 
-        async function checkPassword(password) {
-            const hashedInput = await hashPassword(password);
-            if (hashedInput === hashedPassword) {
-                //document.getElementById('password-prompt').style.display = 'none';
-                document.getElementById('protected-content').style.display = 'block';
-                $('#loginModal').modal('hide');
-            } else {
-                alert('Incorrect password!');
-            }
+      async function checkPassword(password) {
+        const hashedInput = await hashPassword(password);
+        if (hashedInput === hashedPassword) {
+          //document.getElementById('password-prompt').style.display = 'none';
+          document.getElementById("protected-content").style.display = "block";
+          $("#loginModal").modal("hide");
+        } else {
+          alert("Incorrect password!");
         }
+      }
 
-        document.getElementById('passwordForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const password = document.getElementById('password-input').value;
-            checkPassword(password);
+      document
+        .getElementById("passwordForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const password = document.getElementById("password-input").value;
+          checkPassword(password);
         });
 
-        // Show the login modal on page load
-        // $(document).ready(function () {
+      // Show the login modal on page load
+      // $(document).ready(function () {
 
-        // $('#loginModal').modal('show');
-        //});
+      // $('#loginModal').modal('show');
+      //});
     </script>
-</body>
-
+  </body>
 </html>
